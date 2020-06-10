@@ -45,7 +45,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("css-view", function () {
+gulp.task("css-dev", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -71,7 +71,7 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 })
 
-gulp.task("html-view", function () {
+gulp.task("html-dev", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
@@ -118,6 +118,17 @@ gulp.task("copy", function () {
 .pipe(gulp.dest("build"));
 });
 
+gulp.task("copy-dev", function () {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}", "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+  base: "source"
+  })
+.pipe(gulp.dest("open"));
+});
+
 gulp.task("sprite", function () {
   return gulp.src("source/img/sp-*.svg")
     .pipe(svgstore({ inlineSvg: true
@@ -147,7 +158,7 @@ gulp.task("server", function () {
     gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
 });
 
-gulp.task("server-view", function () {
+gulp.task("server-dev", function () {
   server.init({
     server: "",
     notify: false,
@@ -167,4 +178,4 @@ gulp.task("refresh", function (done) {
 
 gulp.task("build", gulp.series("clean", "copy", "css", "images", "webp", "js", "html"));
 gulp.task("start", gulp.series("build", "server"));
-gulp.task("view", gulp.series("css-view", "html-view", "server-view"));
+gulp.task("dev", gulp.series("copy-dev", "css-dev", "html-dev", "server-dev"));

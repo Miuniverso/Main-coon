@@ -5,7 +5,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp start",
-    "view": "gulp view"
+    "dev": "gulp dev"
   },
   "author": "Yana",
   "license": "ISC",
