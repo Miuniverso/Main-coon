@@ -1,0 +1,138 @@
+.team {
+  position: relative;
+
+  background-color: $bg;
+  padding-bottom: 273px;
+}
+
+.team__title {
+  margin: 0;
+  padding-top: 47px;
+}
+
+.team__subtitle {
+  margin: 0;
+  padding: 0 30px;
+  padding-top: 22px;
+}
+
+.team__wrapper {
+  position: relative;
+}
+
+.team__items {
+  margin-top: 34px;
+  padding: 0 58px;
+
+  z-index: 2;
+  position: relative;
+}
+
+.team__desc {
+  text-align: center;
+
+  margin-top: 25px;
+
+  background-color: $bg-light;
+
+  position: absolute;
+  width: 90%;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  padding-top: 86px;
+  padding-bottom: 13px;
+}
+
+.team__data {
+  color: $brown;
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.team__social {
+  @include list;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  margin-top: 23px;
+  padding: 0;
+}
+
+@media (min-width: $tablet) {
+  .team {
+    padding-bottom: 197px;
+  }
+
+  .team__title {
+    padding-top: 86px;
+  }
+
+  .team__subtitle {
+    letter-spacing: 0.2px;
+    padding-top: 18px;
+  }
+
+  .team__desc {
+    position: relative;
+
+    min-height: 410px;
+    box-sizing: border-box;
+    border: 24px solid $bg;
+    outline: 1px solid $brown;
+
+    width: 84%;
+    margin-left: -13px;
+    padding-top: 77px;
+    padding-left: 104px;
+    top: 0;
+
+    text-align: left;
+  }
+
+  .team__items {
+    position: absolute;
+    right: 22px;
+    bottom: -99px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .team {
+    padding-bottom: 73px;
+  }
+
+  .team__wrapper {
+    display: flex;
+    margin-top: 24px;
+
+    width: 100%;
+  }
+
+  .team__desc {
+    min-height: 400px;
+    width: 51%;
+    // transform: translateX(-20%);
+
+    padding-top: 71px;
+    padding-left: 95px;
+    padding-bottom: 30px;
+    margin: 0;
+
+    position: static;
+
+    transform: translateX(-101px);
+
+
+    border-top: 23px solid $bg;
+    border-bottom: 23px solid $bg;
+    border-right: 34px solid $bg;
+    border-left: 26px solid $bg;
+  }
+}

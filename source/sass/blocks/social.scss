@@ -1,0 +1,33 @@
+.social__link svg {
+  fill: $white;
+  transition: .3s ease;
+
+  &:hover {
+    fill: $brown;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+@media (min-width: $tablet) {
+  .social {
+    position: static;
+    justify-content: flex-start;
+
+    margin-bottom: 20px;
+    margin-top: 48px;
+    margin-left: 2px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .social {
+    margin-top: 46px;
+  }
+}

@@ -1,0 +1,19 @@
+.headline {
+  font-family: $font-secondary;
+  color: $brown;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+@media (min-width: $tablet) {
+  .headline {
+    font-size: 16px;
+
+    max-width: 300px;
+  }
+}
+
+@media (min-width: $desktop) {
+
+}

@@ -1,0 +1,77 @@
+.blockquote {
+  margin: 0;
+}
+
+.blockquote__name {
+  color: $brown;
+  font-family: $font-secondary;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+
+  display: block;
+
+  margin-top: -3px;
+  margin-bottom: 3px;
+}
+
+.blockquote__position {
+  color: $brown;
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.blockquote__text {
+  margin: 0;
+  padding: 0;
+  padding: 0 10px;
+  margin-top: 16px;
+
+  color: rgba($white, 0.7);
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+@media (min-width: $tablet) {
+  .blockquote__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .blockquote__text {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin: 0;
+    padding: 0;
+    margin-top: 23px;
+
+    max-width: 84%;
+
+    &--break {
+      display: none;
+    }
+  }
+
+  .blockquote__position {
+    padding-top: 5px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .blockquote__text {
+    max-width: 80%;
+  }
+}

@@ -1,0 +1,14 @@
+.title {
+  color: $white;
+  font-family: $font-title;
+  font-size: 28px;
+  font-weight: 400;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .title {
+    font-size: 36px;
+  }
+}

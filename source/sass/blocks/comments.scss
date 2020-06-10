@@ -1,0 +1,274 @@
+.comments {
+  background-color: $bg-light;
+
+  text-align: center;
+
+  padding-bottom: 330px;
+  // margin-top: -120px;
+}
+
+.comments__title {
+  margin: 0;
+  padding-top: 54px;
+}
+
+.comments__wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.comments__photo {
+  margin: 0 auto;
+  margin-top: 53px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 96%;
+}
+
+.comments__item {
+  top: 83px;
+  position: absolute;
+  background-color: $bg;
+  z-index: -1;
+  width: 91%;
+  min-height: 357px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.comments__blockquote {
+  padding: 0;
+  margin: 0;
+  margin-top: 114px;
+}
+
+.comments__name {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: $white;
+}
+
+.comments__text {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: $white;
+
+  padding: 0px 11%;
+}
+
+.comments__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 177px;
+  margin: 0 auto;
+  padding-top: 6px;
+  padding-bottom: 12px;
+}
+
+.comments__data {
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+
+  color: $brown;
+}
+
+.comments__social {
+  padding: 0;
+  margin: 0;
+}
+
+.comments__btn {
+
+  &--back {
+    @include arrow-back;
+  }
+
+  &--next {
+    @include arrow-next;
+  }
+}
+
+@media (min-width: $tablet) {
+  .comments {
+    padding-bottom: 336px;
+  }
+
+  .comments__title {
+    padding-top: 85px;
+
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .comments__img {
+    width: 302px;
+    height: 208px;
+  }
+
+  .comments__btn {
+
+    &--back {
+      background-image: url("../img/svg/arrow-back-long.svg");
+      width: 59px;
+      height: 16px;
+    }
+
+    &--next {
+      background-image: url("../img/svg/arrow-next-long.svg");
+      width: 59px;
+      height: 16px;
+    }
+  }
+
+  .comments__photo {
+    position: relative;
+    margin-top: 49px;
+
+    width: 60%;
+  }
+
+  .comments__btn {
+    bottom: 31%;
+    position: absolute;
+
+    transform: translateY(10%);
+
+    &--back {
+      left: 0;
+    }
+
+    &--next {
+      right: -5%;
+    }
+  }
+
+  .comments__img {
+    width: 302px;
+    height: 208px;
+    margin-left: 16px;
+  }
+
+  .comments__item {
+    top: 90px;
+    left: 51%;
+    position: absolute;
+    width: 76%;
+    min-height: 368px;
+  }
+
+  .comments__blockquote {
+    margin-top: 151px;
+  }
+
+  .comments__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .comments__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    padding: 0px 21%;
+  }
+
+  .comments__footer {
+    padding-left: 24px;
+    padding-top: 10px;
+
+    width: 179px;
+  }
+
+  .comments__data {
+    font-size: 12px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .comments {
+    padding-bottom: 136px;
+  }
+
+  .comments__wrapper {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .comments__photo {
+    width: auto;
+  }
+
+  .comments__btn {
+    display: none;
+  }
+
+  .comments__img {
+    width: 481px;
+    height: auto;
+    max-width: 100%;
+
+    margin-left: 155px;
+    margin-top: 60px;
+  }
+
+  .comments__item {
+    position: static;
+    width: 50%;
+    // width: 60%;
+    min-height: 408px;
+
+    transform: translate(-16%, 11%);
+  }
+
+  .comments__blockquote {
+    margin-top: 106px;
+    padding-left: 23%;
+    padding-right: 14%;
+
+    text-align: left;
+  }
+
+  .comments__text {
+    margin: 0;
+    margin-top: 14px;
+    padding: 0;
+  }
+
+  .comments__footer {
+    width: 27%;
+
+    justify-content: space-between;
+
+
+    padding: 0;
+    margin: 0;
+    padding-left: 23%;
+    padding-right: 12%;
+    margin-top: 6%;
+  }
+}

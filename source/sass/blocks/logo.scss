@@ -1,0 +1,12 @@
+.logo-img {
+  width: 50px;
+  height: 22px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet) {
+  .logo-img {
+    width: 55px;
+    height: 25px;
+  }
+}

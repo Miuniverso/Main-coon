@@ -1,0 +1,101 @@
+.desc {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+
+  transition: 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 46px;
+
+    background-color: $brown;
+    background-image: url("../img/svg/arrow-next-care.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-left: 1px solid $brown;
+    right: 0;
+    top: 0;
+
+    transition: 0.3s ease;
+  }
+
+  &:hover,
+  &:hover::after {
+    background-color: $bg-dark;
+  }
+}
+
+.desc__title {
+  color: $brown;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 21px;
+  padding-left: 25px;
+}
+
+.desc__text {
+  color: $white;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px 18% 25px 24px;
+}
+
+@media (min-width: $tablet) {
+  .desc {
+    display: block;
+    padding: 39px 120px 21px 48px;
+
+    min-height: 168px;
+    justify-content: space-between;
+
+    &::after {
+      width: 59px;
+    }
+}
+
+  .desc__title {
+    font-size: 22px;
+    line-height: 26px;
+
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  .desc__text {
+    font-size: 14px;
+    line-height: 23px;
+
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .desc {
+    width: 48%;
+    padding: 37px 95px 15px 58px;
+
+    &--hair {
+      order: -1;
+    }
+
+    &--ears-eyes {
+      order: 1;
+    }
+
+    &--claws {
+      order: 0;
+    }
+
+    &--food {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.cats {
+  @include list;
+
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0px 36px;
+
+  max-width: 350px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.cats__item {
+  // border: none;
+  // background-color: none;
+}
+
+.cats__button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: .3s ease;
+
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: rgba($white, 0.2);
+
+  &--active,
+  &:hover {
+    color: $white;
+  }
+}
+
+
+@media (min-width: $tablet) {
+
+  .cats {
+    margin-top: 42px;
+    justify-content: center;
+  }
+
+  .cats__item {
+    margin-right: 23px;
+    margin-left: 10px;
+  }
+
+  .cats__button {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}

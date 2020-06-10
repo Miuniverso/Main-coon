@@ -1,0 +1,37 @@
+@mixin list {
+  list-style: none;
+}
+
+@mixin link {
+  text-decoration: none;
+}
+
+@mixin button {
+  border: 1px solid $brown;
+  padding: 11px 17px;
+  transition: 0.3s ease;
+}
+
+@mixin arrow-back {
+  background-image: url("../img/svg/arrow-back.svg");
+  background-repeat: no-repeat;
+
+  width: 8px;
+  height: 18px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin arrow-next {
+  background-image: url("../img/svg/arrow-next.svg");
+  background-repeat: no-repeat;
+
+  width: 8px;
+  height: 18px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

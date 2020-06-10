@@ -1,0 +1,38 @@
+.main-header {
+  background-color: $bg;
+}
+
+
+.main-header-logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 27px;
+  padding-bottom: 37px;
+}
+
+@media (min-width: $tablet) {
+  .main-header-logo {
+    padding-top: 29px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main-header {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .main-header-logo {
+    padding-top: 47px;
+  }
+}
+
+@media (min-width: $desktop-max) {
+  .main-header .container {
+    padding: 0;
+  }
+}

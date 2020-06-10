@@ -1,0 +1,21 @@
+.btn-link {
+  @include button;
+  @include link;
+
+  font-size: 12px;
+  font-weight: 700;
+  font-family: $font-secondary;
+  color: #ffffff;
+  text-align: center;
+
+  &:hover {
+    background-color: $brown;
+  }
+}
+
+@media (min-width: $tablet) {
+  .btn-link {
+    font-size: 14px;
+    padding: 18px;
+  }
+}

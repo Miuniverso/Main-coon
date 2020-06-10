@@ -1,0 +1,158 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--back {
+    @include arrow-back;
+
+    margin-left: 3px;
+    margin-top: -1px;
+  }
+
+  &--next {
+    @include arrow-next;
+
+    margin-right: 3px;
+    margin-top: -1px;
+  }
+}
+
+.gallery button {
+  border: none;
+  background-position: center;
+
+  width: 31px;
+  height: 31px;
+
+  cursor: pointer;
+}
+
+.gallery__images img:not(.gallery__large) {
+  display: none;
+}
+
+.gallery-link {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 43px;
+}
+
+@media(min-width: $tablet) {
+
+  .gallery {
+    position: relative;
+
+    &--back {
+      width: 12px;
+      height: 30px;
+      background-size: contain;
+
+      margin-left: 19px;
+      margin-top: 0px;
+    }
+
+    &--next {
+      width: 12px;
+      height: 30px;
+      background-size: contain;
+
+      margin-right: 19px;
+      margin-top: 0px;
+    }
+  }
+
+  .gallery__images {
+    z-index: 2;
+  }
+
+  .gallery__image-first {
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translate(0, -50%);
+    z-index: -1;
+  }
+
+  .gallery__image-last {
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    transform: translate(0, -50%);
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .gallery__images img:not(.gallery__large) {
+    display: block;
+  }
+
+  .gallery__large {
+    width: 474px;
+    height: auto;
+
+    z-index: 1;
+
+    object-fit: scale-down;
+  }
+
+  .gallery-link {
+    margin-top: 41px;
+    padding: 18px 39px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .gallery {
+    &--next,
+    &--back {
+      display: none;
+    }
+  }
+  .gallery__images {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 1040px;
+
+    margin: 0 auto;
+    justify-content: space-between;
+
+    & div:first-child {
+      order: 1;
+    }
+
+    & div:last-child {
+      order: -1;
+    }
+  }
+
+  .gallery__image-first,
+  .gallery__image-last {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+
+    width: 520px;
+    height: 214px;
+
+    transform: none;
+  }
+
+  .gallery__image-first {
+    height: 241px;
+
+    margin-top: -244px;
+  }
+
+  .gallery__large {
+    object-fit: contain;
+
+    height: 485px;
+  }
+
+  .gallery-link {
+    margin-top: 50px;
+  }
+}

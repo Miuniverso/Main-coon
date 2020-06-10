@@ -1,0 +1,41 @@
+.social-list {
+  @include list;
+  display: flex;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.social-list__link {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.5px solid rgba(160, 123, 80, 0.27);
+
+  box-sizing: border-box;
+
+  transition: .3s ease;
+
+  &:hover {
+    border: 0.5px solid rgba(255, 255, 255, 0.27);
+  }
+
+  &:hover .social-list__icon {
+    fill: $white;
+  }
+}
+
+.social-list__icon {
+  fill: $brown;
+}
+
+@media (min-width: $tablet) {
+  .social-list__item:not(:last-child) {
+    margin-right: 17px;
+  }
+}

@@ -1,0 +1,152 @@
+.question {
+  display: flex;
+  flex-direction: column;
+
+  // border: 0.5px solid $brown;
+}
+
+.question__link {
+  color: $milk;
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+
+  border: 0.5px solid $brown;
+  background-color: $bg-light;
+
+  position: relative;
+
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-right: 15%;
+  padding-left: 13px;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    height: 100%;
+    width: 43px;
+    border-left: 0.5px solid $brown;
+    background-image: url("../img/svg/open-btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    top: 0;
+    right: 0;
+  }
+
+  &--open {
+
+    &::after {
+      background-image: url("../img/svg/close-btn.svg");
+      background-color: $brown;
+    }
+  }
+}
+
+.question__wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  border-left: 0.5px solid $brown;
+  border-right: 0.5px solid $brown;
+  border-bottom: 0.5px solid $brown;
+}
+
+.question__answer {
+  color: $milk;
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+
+  padding: 0 16px;
+  margin: 0;
+  // padding-top: 6px;
+
+  &:not(:last-child) {
+    padding-bottom: 6px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .question__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    padding-top: 22px;
+    padding-bottom: 16px;
+    padding-right: 25%;
+    padding-left: 28px;
+
+    min-height: 77px;
+
+    &::after {
+      height: 100%;
+      width: 73px;
+    }
+
+    &::before {
+      position: absolute;
+      counter-increment: faq;
+      content: "0"counter(faq);
+
+      left: -15%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 59px;
+      color: $brown;
+    }
+  }
+
+  .question__wrapper {
+    padding-right: 22%;
+    padding-left: 11px;
+    padding-top: 23px;
+    padding-bottom: 24px;
+  }
+
+  .question__answer {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+
+    &:not(:last-child) {
+      padding-bottom: 22px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .question__link {
+    padding-top: 49px;
+    padding-bottom: 42px;
+    padding-left: 47px;
+
+    &::before {
+      left: -110px;
+
+      font-size: 70px;
+      line-height: 82px;
+    }
+
+    &::after {
+      width: 104px;
+    }
+  }
+
+  .question__wrapper {
+    padding-right: 23%;
+    padding-left: 32px;
+    padding-top: 36px;
+    padding-bottom: 39px;
+  }
+}
